@@ -66,51 +66,50 @@
                 <ul>
 
                     <li>
-                        <a href="#">
+                        <a href="index.html" class="active">
                             HOME
-                        </a>
-                    </li>
+            </a>
+         </li>
 
-                    <li>
-                        <a href="#">
-                            ABOUT
-                        </a>
-                    </li>
+         <li>
+            <a href="pages/about.html">
+                ABOUT
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#">
-                            CABINETS
-                        </a>
-                    </li>
+        <li>
+            <a href="pages/cabinets.html">
+                CABINETS
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#">
-                            DRAWERS
-                        </a>
-                    </li>
+        <li>
+            <a href="pages/drawers.html">
+                DRAWERS
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#">
-                            FURNITURE
-                        </a>
-                    </li>
+        <li>
+            <a href="pages/furniture.html">
+                FURNITURE
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#">
-                            PROJECTS
-                        </a>
-                    </li>
+        <li>
+            <a href="pages/projects.html">
+                PROJECTS
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#">
-                            CONTACT
-                        </a>
-                    </li>
+        <li>
+            <a href="pages/inquiry.html">
+                INQUIRY
+            </a>
+        </li>
 
-                </ul>
+    </ul>
 
-            </nav>
-
+</nav>
         </header>
 
 
@@ -243,9 +242,105 @@
 
         </section>
 
+
     </div>
 
+    <!-- =========================
+        CONTACT SECTION
+     ========================= -->
 
+<section class="contact" id="contact">
+
+    <div class="contact-heading">
+
+        <h5>GET IN TOUCH</h5>
+
+        <h2>Our Locations</h2>
+
+        <p>
+            Visit any of our Cosmos Surfaces & IGM Surfaces showrooms across the United States.
+        </p>
+
+    </div>
+
+    <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-left">
+
+            <select id="locationSelect" onchange="changeLocation()">
+
+                <option value="boston">Boston, MA</option>
+                <option value="charleston">Charleston, SC</option>
+                <option value="charlotte">Charlotte, NC</option>
+                <option value="dallas">Dallas, TX</option>
+                <option value="greensboro">Greensboro, NC</option>
+                <option value="nashville">Nashville, TN</option>
+                <option value="raleigh">Raleigh, NC</option>
+                <option value="washington">Washington, DC</option>
+                <option value="atlanta">Atlanta, GA</option>
+                <option value="houston">Houston, TX</option>
+                <option value="northbergen">North Bergen, NJ</option>
+                <option value="philadelphia">Philadelphia, PA</option>
+                <option value="windsor">Windsor, CT</option>
+
+            </select>
+
+            <div id="locationInfo">
+
+                <h3>Boston, MA</h3>
+
+                <p>
+                    205 Flanders Road<br>
+                    Westborough, MA 01581
+                </p>
+
+                <p>
+
+                    <strong>Phone:</strong><br>
+
+                    <a href="tel:5083295584">
+                        508-329-5584
+                    </a>
+
+                </p>
+
+                <p>
+
+                    <strong>Email:</strong><br>
+
+                    <a href="mailto:Boston@cosmossurfaces.com">
+                        Boston@cosmossurfaces.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="contact-right">
+
+            <iframe
+
+                id="googleMap"
+
+                src="https://maps.google.com/maps?q=Westborough%20MA&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+                loading="lazy"
+
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- JAVASCRIPT -->
 
     <script src="js/script.js"></script>
