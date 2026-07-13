@@ -91,6 +91,110 @@ if(slides.length > 0){
 
     },5000);
 }
+
+/*==============================
+        CATALOG
+==============================*/
+
+const openCatalog = document.getElementById("openCatalog");
+const closeCatalog = document.getElementById("closeCatalog");
+const popup = document.getElementById("catalogPopup");
+
+const drawer = document.getElementById("drawer");
+const book = document.getElementById("catalogBook");
+
+/*-----------------------
+    OPEN PDF
+-----------------------*/
+
+function showCatalog(){
+
+    popup.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+}
+
+/*-----------------------
+    CLOSE PDF
+-----------------------*/
+
+function closePopup(){
+
+    popup.style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+/*-----------------------
+    BUTTON
+-----------------------*/
+
+if(openCatalog){
+
+    openCatalog.addEventListener("click",showCatalog);
+
+}
+
+/*-----------------------
+    DRAWER
+-----------------------*/
+
+if(drawer){
+
+    drawer.addEventListener("click",function(){
+
+        drawer.classList.add("drawer-open");
+
+        setTimeout(function(){
+
+            book.classList.add("book-show");
+
+        },500);
+
+    });
+
+}
+
+/*-----------------------
+    BOOK
+-----------------------*/
+
+if(book){
+
+    book.addEventListener("click",function(){
+
+        showCatalog();
+
+    });
+
+}
+
+/*-----------------------
+    CLOSE
+-----------------------*/
+
+if(closeCatalog){
+
+    closeCatalog.addEventListener("click",closePopup);
+
+}
+
+/*-----------------------
+ CLICK OUTSIDE
+-----------------------*/
+
+window.addEventListener("click",function(e){
+
+    if(e.target===popup){
+
+        closePopup();
+
+    }
+
+});
+
 /* =====================================
       CONTACT LOCATION DATA
 ===================================== */
@@ -293,42 +397,3 @@ const locations = {
     }
 
 };
-
-
-/* =====================================
-      CHANGE LOCATION
-===================================== */
-
-function changeLocation(){
-
-    const value = document.getElementById("locationSelect").value;
-
-    const data = locations[value];
-
-    document.getElementById("locationInfo").innerHTML = `
-
-        <h3>${data.title}</h3>
-
-        <p>${data.address}</p>
-
-        <p><strong>Phone:</strong><br>
-
-        <a href="tel:${data.phoneLink}">${data.phone}</a>
-
-        </p>
-
-        <p><strong>Email:</strong><br>
-
-        <a href="mailto:${data.email}">${data.email}</a>
-
-        </p>
-
-    `;
-
-    document.getElementById("googleMap").src = data.map;
-
-}
-
-/* Load default location */
-
-window.addEventListener("load", changeLocation);

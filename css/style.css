@@ -52,7 +52,7 @@ body{
 
     background:black;
 
-    animation:fillLogo 4s linear forwards;
+    animation:fillLogo 6s linear forwards;
 }
 
 @keyframes fillLogo{
@@ -71,7 +71,6 @@ body{
     font-size:40px;
     margin-top:30px;
 }
-
 
 /* ===================
         WEBSITE
@@ -115,7 +114,7 @@ body{
 }
 
 .nav-logo img{
-    height:85px;
+    height:95px;
 }
 
 
@@ -637,4 +636,527 @@ nav ul li a.active{
 nav ul li a:hover{
     color:#C9A66B;
     transition:.3s;
+}
+/*========================================
+            CATALOG SECTION
+========================================*/
+
+.catalog-section{
+
+    background:#0b0b0b;
+
+    padding:120px 8%;
+
+    overflow:hidden;
+
+}
+
+.catalog-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+/*==============================
+        LEFT CONTENT
+==============================*/
+
+.catalog-content{
+
+    flex:1;
+
+}
+
+.catalog-subtitle{
+
+    display:block;
+
+    color:#C9A66B;
+
+    letter-spacing:5px;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+.catalog-content h2{
+
+    color:#ffffff;
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:30px;
+
+}
+
+.catalog-content p{
+
+    color:#d0d0d0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin-bottom:40px;
+
+}
+
+.catalog-btn{
+
+    background:#C9A66B;
+
+    color:#111;
+
+    border:none;
+
+    padding:18px 42px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.catalog-btn:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-4px);
+
+}
+
+/*==============================
+        RIGHT SIDE
+==============================*/
+
+.catalog-display{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==============================
+        CABINET
+==============================*/
+
+.cabinet-box{
+
+    position:relative;
+
+    width:430px;
+
+    height:310px;
+
+    perspective:1500px;
+
+}
+
+/*==============================
+        DRAWER
+==============================*/
+
+.drawer{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:18px;
+
+    background:linear-gradient(145deg,#2c2c2c,#111111);
+
+    box-shadow:
+
+        0 30px 60px rgba(0,0,0,.55),
+
+        inset 0 1px 0 rgba(255,255,255,.06);
+
+    transition:.8s ease;
+
+    z-index:10;
+
+    cursor:pointer;
+
+}
+
+.drawer:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* Drawer Front */
+
+.drawer-front{
+
+    position:absolute;
+
+    inset:18px;
+
+    border-radius:14px;
+
+    border:2px solid rgba(201,166,107,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.drawer-front img{
+
+    width:240px;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/*==============================
+        HANDLE
+==============================*/
+
+.drawer-handle{
+
+    position:absolute;
+
+    bottom:24px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100px;
+
+    height:8px;
+
+    background:#C9A66B;
+
+    border-radius:20px;
+
+    box-shadow:
+
+        0 0 15px rgba(201,166,107,.45);
+
+}
+
+/*==============================
+        BOOK
+==============================*/
+
+.catalog-book{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    width:185px;
+
+    height:245px;
+
+    background:#141414;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.45);
+
+    transition:1s ease;
+
+    z-index:1;
+
+    opacity:0;
+
+    cursor:pointer;
+
+}
+
+.catalog-book img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.book-title{
+
+    position:absolute;
+
+    bottom:16px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:#C9A66B;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    background:rgba(0,0,0,.55);
+
+    padding:10px 0;
+
+}
+
+/*==============================
+      ANIMATION CLASSES
+==============================*/
+
+.drawer-open{
+
+    transform:translateY(60px);
+
+}
+
+.book-show{
+
+    bottom:180px;
+
+    opacity:1;
+
+}
+
+/*==============================
+        MOBILE
+==============================*/
+
+@media(max-width:992px){
+
+.catalog-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.catalog-content h2{
+
+    font-size:42px;
+
+}
+
+.catalog-content p{
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+}
+
+.catalog-display{
+
+    margin-top:50px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.catalog-section{
+
+    padding:80px 25px;
+
+}
+
+.catalog-content h2{
+
+    font-size:34px;
+
+}
+
+.catalog-content p{
+
+    font-size:16px;
+
+}
+
+.cabinet-box{
+
+    width:320px;
+
+    height:230px;
+
+}
+
+.drawer-front img{
+
+    width:170px;
+
+}
+
+.catalog-book{
+
+    width:140px;
+
+    height:190px;
+
+}
+
+.drawer-handle{
+
+    width:80px;
+
+}
+
+}
+/*========================================
+            CATALOG POPUP
+=========================================*/
+
+#catalogPopup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.90);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+    animation:fadeIn .4s;
+}
+
+.catalog-window{
+
+    width:85%;
+    height:90vh;
+
+    background:#111;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+
+#catalogFrame{
+
+    width:100%;
+    height:100%;
+    border:none;
+
+    background:#fff;
+}
+
+#closeCatalog{
+
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    color:#fff;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+#closeCatalog:hover{
+
+    color:#C9A66B;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.catalog-window{
+
+    width:95%;
+    height:85vh;
+
+}
+
+#closeCatalog{
+
+    font-size:32px;
+
+}
+
+}
+.catalog-preview{
+    cursor:pointer;
+}
+
+.catalog-preview *{
+    pointer-events:none;
+}
+.catalog-book{
+
+    transition:1s;
 }

@@ -25,24 +25,22 @@
                 LOADER
     ================================== -->
 
-    <div id="loader">
+ <div id="loader">
 
-        <div class="logo-container">
+    <div class="logo-container">
 
-            <img
-                src="images/cosmos-gold.png"
-                class="loader-logo"
-                alt="COSMOS">
+        <img
+            src="images/loader-logo.png"
+            class="loader-logo"
+            alt="COSMOS IGM">
 
-            <div class="fill-mask"></div>
-
-        </div>
-
-        <div id="percent">0%</div>
+        <div class="fill-mask"></div>
 
     </div>
 
+    <div id="percent">0%</div>
 
+</div>
     <!-- =================================
                 WEBSITE
     ================================== -->
@@ -56,7 +54,7 @@
             <div class="nav-logo">
 
                 <img
-                    src="images/cosmos-gold.png"
+                    src="images/loader-logo.png "
                     alt="COSMOS">
 
             </div>
@@ -242,9 +240,129 @@
 
         </section>
 
+        
+<!-- ===========================
+        CATALOG SECTION
+=========================== -->
+
+<section class="catalog-section">
+
+    <div class="catalog-container">
+
+        <!-- LEFT CONTENT -->
+
+        <div class="catalog-content">
+
+            <span class="catalog-subtitle">
+                2026 COLLECTION
+            </span>
+
+            <h2>
+                Premium Kitchen Cabinet<br>
+                Catalog
+            </h2>
+
+            <p>
+
+                Explore our luxury kitchen cabinet collection featuring
+                premium cabinetry, drawer systems, accessories,
+                furniture and interior solutions.
+
+                Download our latest catalog for complete specifications,
+                finishes and inspiration.
+
+            </p>
+
+            <button
+                class="catalog-btn"
+                id="openCatalog">
+
+                OPEN COLLECTION
+
+            </button>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="catalog-display">
+
+            <div class="cabinet-box">
+
+                <!-- BOOK -->
+
+                <div
+                    class="catalog-book"
+                    id="catalogBook">
+
+                    <img
+                        src="images/loader-logo.png"
+                        alt="Catalog">
+
+                    <div class="book-title">
+
+                        2026 COLLECTION
+
+                    </div>
+
+                </div>
+
+
+                <!-- DRAWER -->
+
+                <div
+                    class="drawer"
+                    id="drawer">
+
+                    <div class="drawer-front">
+
+                        <img
+                            src="images/loader-logo.png"
+                            alt="COSMOS">
+
+                        <div class="drawer-handle"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
+
+
+<!-- ===========================
+        PDF POPUP
+=========================== -->
+
+<div id="catalogPopup">
+
+    <div class="catalog-window">
+
+        <span id="closeCatalog">
+
+            &times;
+
+        </span>
+
+        <iframe
+
+            id="catalogFrame"
+
+            src="catalog/cosmos-catalog.pdf">
+
+        </iframe>
+
+    </div>
+
+</div>
+
+</section>
     <!-- =========================
         CONTACT SECTION
      ========================= -->
@@ -339,11 +457,14 @@
         </div>
 
     </div>
+       
+
 
 </section>
     <!-- JAVASCRIPT -->
 
     <script src="js/script.js"></script>
+ 
 
 </body>
 
